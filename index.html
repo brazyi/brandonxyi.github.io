@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>Jennifer & Victor</title>
+
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
+		
+		<!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    
+    <link rel="stylesheet" href="css/styles.css">
+		
+    <link rel="shortcut icon" href="images/favicon.ico" /> 
+    
+    <link href="//fonts.googleapis.com/css?family=Quicksand:300normal,400normal,700normal|Open+Sans:400normal|Lato:400normal|Raleway:400normal|Oswald:400normal|Droid+Sans:400normal|Josefin+Sans:400normal|Merriweather:400normal|Arvo:400normal|PT+Sans:400normal|Cabin:400normal&amp;subset=all" rel="stylesheet" type="text/css">
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	</head>
+
+	<!-- The ng-app directive tells angular that the code below should be evaluated -->
+
+	<body ng-app ng-controller="ListCtrl">
+
+		<!-- The navigation menu will get the value of the "active" variable as a class.
+			 The $event.preventDefault() stops the page from jumping when a link is clicked. -->
+
+		<nav class="navbar navbar-default" role="navigation" ng-click="$event.preventDefault()">
+      
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" ng-click="active='home'" href="#">J & V</a>
+        </div>
+        
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li ng-class="{active: active=='story'}"><a ng-click="active='story'" href="#story">Our Story</a></li>
+            <li ng-class="{active: active=='proposal'}"><a ng-click="active='proposal'" href="#proposal">Proposal</a></li>
+            <li ng-class="{active: active=='engagement'}"><a ng-click="active='engagement'" href="#engagement">Engagement</a></li>
+            <li ng-class="{active: active=='big-day'}"><a ng-click="active='big-day'" href="#engagement">The Big Day</a></li>
+            <li ng-class="{active: active=='crew'}"><a ng-click="active='crew'" href="#engagement">Meet the Crew</a></li>
+            <li ng-class="{active: active=='registry'}"><a ng-click="active='registry'" href="#engagement">Registry</a></li>
+            <li ng-class="{active: active=='rsvp'}"><a ng-click="active='rsvp'" href="#engagement">RSVP</a></li>
+          </ul>
+        </div>
+      </div>
+      
+		</nav>
+
+		<!-- ng-show will show an element if the value in the quotes is truthful,
+			 while ng-hide does the opposite. -->
+		
+		<div class="home-header" ng-show="active=='home'">
+		  <div class="title">Jennifer & Victor</div>
+		  <div class="description">
+		    <span class="swirl_left">
+		      <span class="swirl_right">26 july 2014</span>
+		    </span>
+		  </div>
+		</div>
+		
+    <div class="story-content" ng-show="active=='story'">
+      <div class="story-title">It all started with a big bang</div>
+      <div class="story-row">
+        <div class="col-sm-12 col-sm-5 left-column">
+          <h3>Her Story</h3>
+          <p>blabhalbhalbhalbhlbhalb<p>
+        </div>
+        <div class="hidden-xs col-sm-2 story-divider">
+          <img src="images/flower1.png" class="divider-image">
+        </div>
+        <div class="col-sm-12 col-sm-5 right-column">
+          <h3>His Story</h3>
+          <p>blabhalbhalbhalbhlbhalb<p>
+        </div>
+      </div>
+    </div>
+    
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+		
+		<script src="js/controller.js"></script>
+	</body>
+</html>
